@@ -251,7 +251,7 @@
 -- Select all of the user names and the count of shows they're going to see.
     -- SELECT users.name, COUNT(1)
     -- FROM users INNER JOIN shows_users ON shows_users.user_id = users.id
-    -- GROUP BY users.name
+    -- GROUP BY users.name;
     --        name       | count 
     -- ------------------+-------
     --  Sky Su           |     5
@@ -274,3 +274,21 @@
     -- (17 rows)
 
 -- SELECT all users who are going to a show at 17:15.
+    -- SELECT users.name
+    -- FROM users INNER JOIN shows_users ON shows_users.user_id = users.id INNER JOIN times ON times.show_id = shows_users.show_id
+    -- WHERE times.time = '17:15';
+    --       name       
+    -- -----------------
+    --  Rick Henri
+    --  Keith Douglas
+    --  Andrew Insley
+    --  Nick Ridell
+    --  Evelyn Utterson
+    --  Callum Hogg
+    --  Gary Carmichael
+    --  Nicholas Hill
+    --  Michael McLeod
+    --  Callum Hogg
+    --  Oscar Brooks
+    --  Ross Galloway
+    -- (12 rows)
