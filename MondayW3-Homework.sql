@@ -242,8 +242,35 @@
     -- (1 row)
 
 -- Select the number of users who want to see "Shitfaced Shakespeare".
-
+    -- SELECT COUNT(1) FROM shows_users INNER JOIN shows ON shows.id = shows_users.show_id WHERE shows.name = 'Shitfaced Shakespeare';
+    --  count 
+    -- -------
+    --      7
+    -- (1 row)
 
 -- Select all of the user names and the count of shows they're going to see.
+    -- SELECT users.name, COUNT(1)
+    -- FROM users INNER JOIN shows_users ON shows_users.user_id = users.id
+    -- GROUP BY users.name
+    --        name       | count 
+    -- ------------------+-------
+    --  Sky Su           |     5
+    --  Oscar Brooks     |     4
+    --  Gary Carmichael  |     4
+    --  Michael McLeod   |     6
+    --  Bethany Fraser   |     4
+    --  Chris Sloan      |     4
+    --  Keith Douglas    |     6
+    --  Daniel Gillespie |     4
+    --  Callum Dougan    |     4
+    --  Ross Galloway    |     5
+    --  Nicholas Hill    |     5
+    --  Andrew Insley    |     4
+    --  Nick Ridell      |     5
+    --  Jay Chetty       |     5
+    --  Rick Henri       |     5
+    --  Callum Hogg      |     4
+    --  Evelyn Utterson  |     7
+    -- (17 rows)
 
 -- SELECT all users who are going to a show at 17:15.
