@@ -235,9 +235,14 @@
 -- The following questions can be answered by using nested SQL statements but ideally you should learn about JOIN clauses to answer them.
 
 -- Select the time for the Edinburgh Royal Tattoo.
--- SELECT time FROM times WHERE show_id = 8;
+    -- SELECT times.time FROM times INNER JOIN shows ON times.id = shows.id WHERE shows.name = 'Edinburgh Royal Tattoo';
+    --  time  
+    -- -------
+    --  22:00
+    -- (1 row)
 
 -- Select the number of users who want to see "Shitfaced Shakespeare".
+
 
 -- Select all of the user names and the count of shows they're going to see.
 
